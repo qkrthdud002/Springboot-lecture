@@ -16,17 +16,20 @@ spring:
 #  test.database.replace: none
 
   datasource:
-    url: jdbc:mysql://localhost:3307/lectureboard?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3307/lectureboard
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     defer-datasource-initialization: true
-
-  sql:
-    init:
-      mode: always
+    hibernate.ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+  h2.console.enabled: true
+  sql.init.mode: always
 
   test.database.replace : none
 
