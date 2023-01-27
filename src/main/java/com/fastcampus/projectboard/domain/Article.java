@@ -33,6 +33,7 @@ public class Article {
     @Setter
     @Column(nullable = false)
     private String title; // 제목
+
     @Setter
     @Column(nullable = false)
     private String content; // 본문
